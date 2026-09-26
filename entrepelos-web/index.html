@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EntrePelos · Peluquería canina y felina en La Florida · Sin sedantes</title>
+<meta name="description" content="Baño, corte, deslanado y petshop en La Florida. Atención sin sedantes y con refuerzo positivo. Agenda tu hora por WhatsApp.">
+<meta property="og:title" content="EntrePelos · Peluquería canina y felina en La Florida">
+<meta property="og:description" content="Baño, corte y cuidado del pelaje sin sedantes, con paciencia y refuerzo positivo. Agenda tu hora por WhatsApp.">
+<meta property="og:locale" content="es_CL">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#C92A62">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link id="fuentes" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --rose:#C92A62; --rose-dark:#9E1F4C; --rose-deep:#7A1C40; --blush:#FDE6EC; --blush2:#F9C9D6; --rose-soft:#F9A8C0; --rose-border:#F3C4D2; --on-rose1:#FFE4EC; --on-rose2:#F7B8CB;
+  --ink:#2B1B26; --cream:#FFF8F1; --accent:#FFC857; --accent-light:#FFE1A8;
+  --muted:#5A4550; --muted2:#6B5561; --line:#F1DDD3; --ink-muted:#E9D9DF;
+  --f-title:'Fraunces',Georgia,serif; --f-body:'Figtree',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--rose)}
+h1,h2,h3{font-family:var(--f-title);font-weight:600;margin:0;text-wrap:balance}
+h2{font-size:clamp(38px,5vw,58px);line-height:1.04;letter-spacing:-1.2px}
+h3{font-size:24px;line-height:1.2}
+p{margin:0}
+em{font-style:italic}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--rose)}
+.lead{font-size:19px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:inherit;font-weight:600;font-size:16px;text-decoration:none;border-radius:999px;padding:15px 26px;cursor:pointer;border:2px solid transparent;transition:transform .15s ease,filter .15s ease,background-color .15s ease;white-space:nowrap}
+.btn:hover{transform:translateY(-1px)}
+.btn-rose{background:var(--rose);color:#fff}.btn-rose:hover{filter:brightness(.9)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}.btn-ghost:hover{background:rgba(0,0,0,.05)}
+.btn-light{background:var(--cream);color:var(--ink)}.btn-light:hover{filter:brightness(1.04)}
+.btn-accent{background:var(--accent);color:var(--ink);font-weight:700}.btn-accent:hover{filter:brightness(1.05)}
+.btn svg{flex-shrink:0}
+:focus-visible{outline:3px solid var(--rose);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--cream);padding:10px 16px;border-radius:8px;z-index:99}.skip:focus{left:8px}
+
+/* barra superior */
+.topbar{background:var(--ink);color:var(--cream);font-size:14px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-top:10px;padding-bottom:10px}
+.topbar span{display:inline-flex;gap:8px;align-items:center}
+.topbar .left{display:flex;gap:24px;flex-wrap:wrap}
+.topbar a{color:var(--cream);text-decoration:none;font-weight:600}
+
+/* navegación */
+header.nav{position:sticky;top:0;z-index:30;background:var(--cream);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;padding-top:16px;padding-bottom:16px}
+.brand{display:flex;gap:10px;align-items:center;text-decoration:none;color:var(--ink)}
+.brand .mark{width:44px;height:44px;border-radius:14px;background:var(--rose);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.brand img.logo{height:48px;width:auto}
+.brand .name{font-family:var(--f-title);font-size:26px;font-weight:700;letter-spacing:-.5px;line-height:1;display:block}
+.brand .sub{font-size:12px;color:var(--muted2);letter-spacing:.4px;display:block;margin-top:4px}
+nav.links{display:flex;gap:28px;font-weight:500}
+nav.links a{color:var(--ink);text-decoration:none}nav.links a:hover{color:var(--rose)}
+
+/* portada */
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding-top:72px;padding-bottom:96px}
+.hero .copy{display:flex;flex-direction:column;gap:26px}
+.pill{align-self:flex-start;background:var(--blush);color:var(--rose-dark);font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px}
+.hero h1{font-size:clamp(48px,6.4vw,84px);line-height:.98;letter-spacing:-2px}
+.hero h1 em{color:var(--rose)}
+.hero .lead{max-width:520px;font-size:20px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.stats{list-style:none;margin:6px 0 0;padding:24px 0 0;border-top:1px solid #EBD6CC;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stats li{display:flex;flex-direction:column;gap:2px}
+.stats b{font-family:var(--f-title);font-size:30px;font-weight:700;display:flex;gap:6px;align-items:center;line-height:1.2}
+.stats li>span{font-size:14px;color:var(--muted2);line-height:1.35}
+.collage{position:relative;height:620px}
+.collage .p1{position:absolute;top:0;right:0;width:400px;height:500px;border-radius:200px 200px 28px 28px;object-fit:cover;background:var(--blush2)}
+.collage .p2{position:absolute;left:0;bottom:0;width:280px;height:320px;border-radius:28px;border:8px solid var(--cream);object-fit:cover;background:var(--accent-light)}
+.rating-card{position:absolute;left:40px;top:90px;background:#fff;border-radius:20px;padding:18px 22px;box-shadow:0 18px 40px rgba(43,27,38,.14);display:flex;gap:14px;align-items:center}
+.rating-card b{font-family:var(--f-title);font-size:44px;line-height:1}
+.rating-card small{font-size:13px;color:var(--muted2);display:block;margin-top:4px}
+.stars{display:flex;gap:2px}
+.seal{position:absolute;right:330px;top:380px;width:124px;height:124px;border-radius:999px;background:var(--ink);color:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(-10deg);box-shadow:0 14px 30px rgba(43,27,38,.25);font-family:var(--f-title);font-size:22px;line-height:1.05}
+.seal i{font-weight:600}.seal b{font-weight:700}.seal small{font-family:var(--f-body);font-size:11px;letter-spacing:1.5px;margin-top:6px;color:var(--accent);font-weight:700}
+
+/* franja */
+.band{background:var(--rose);color:#fff}
+.band .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:20px;padding-bottom:20px;font-family:var(--f-title);font-style:italic;font-size:24px;flex-wrap:wrap}
+.band .star{color:var(--accent);font-style:normal}
+
+section{padding:110px 0}
+.split{display:grid;grid-template-columns:5fr 7fr;gap:48px}
+.stack{display:flex;flex-direction:column;gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:14px}
+.card p{color:var(--muted);font-size:16px}
+.ico{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ico.rose{background:var(--blush);color:var(--rose)}
+.ico.gold{background:#FFF0CC;color:#9A6205}
+.ico.green{background:#E4F1EA;color:#2E7250}
+.ico.blue{background:#E7ECFA;color:#34489A}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.offset{margin-top:40px}
+.card.dark{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.card.dark p{color:var(--ink-muted)}
+.card.dark .ico{background:var(--rose);color:#fff}
+
+/* servicios */
+#servicios{background:var(--blush)}
+#servicios .eyebrow{color:var(--rose-dark)}
+.sv-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:44px;flex-wrap:wrap}
+.sv-head .intro{display:flex;flex-direction:column;gap:16px;max-width:560px}
+.seg-wrap{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.seg-wrap>span{font-size:14px;font-weight:600;color:var(--muted)}
+.seg{display:flex;gap:6px;background:#fff;padding:6px;border-radius:999px;border:1px solid var(--rose-border)}
+.seg button{font:inherit;font-size:15px;font-weight:600;cursor:pointer;border:0;padding:12px 22px;border-radius:999px;background:transparent;color:var(--ink)}
+.seg button[aria-pressed="true"]{background:var(--rose);color:#fff}
+.sv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.sv{border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:14px;min-height:340px;background:#fff;border:1px solid var(--rose-border)}
+.sv h3{font-size:26px}
+.sv p{color:var(--muted);font-size:16px;flex-grow:1}
+.sv .price{padding-top:18px;border-top:1px solid var(--rose-border);display:flex;flex-direction:column;gap:2px}
+.sv .price small{font-size:13px;color:var(--muted)}
+.sv .price b{font-family:var(--f-title);font-size:30px}
+.sv:nth-child(2){background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.sv:nth-child(2) p,.sv:nth-child(2) .price small{color:var(--ink-muted)}
+.sv:nth-child(2) .price{border-top-color:rgba(255,255,255,.15)}
+.sv:nth-child(2) .ico{background:var(--rose);color:#fff}
+.note{margin-top:40px;font-size:15px;color:#6B4353;display:flex;gap:10px;align-items:flex-start;max-width:760px}
+
+/* visita */
+.center{text-align:center;display:flex;flex-direction:column;gap:16px;align-items:center;margin-bottom:56px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.steps li{display:flex;flex-direction:column;gap:14px}
+.steps p{color:var(--muted);font-size:16px}
+.num{width:64px;height:64px;border-radius:999px;font-family:var(--f-title);font-size:28px;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+/* galería */
+#galeria{background:var(--ink);color:var(--cream)}
+#galeria .eyebrow{color:var(--accent)}
+#galeria h2 em{color:var(--rose-soft)}
+#galeria .lead{color:#E0CCD4}
+.gal-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:44px;flex-wrap:wrap}
+.gal-head .intro{display:flex;flex-direction:column;gap:16px;max-width:620px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:22px;background:#3a2833}
+.gallery img:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gallery img:nth-child(6){grid-column:span 2}
+
+/* reseñas */
+#resenas{padding:110px 0 50px}
+.reviews{background:#fff;border:1px solid var(--line);border-radius:32px;padding:56px 64px;display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap}
+.reviews .big{font-family:var(--f-title);font-size:128px;font-weight:700;line-height:.9;letter-spacing:-4px;color:var(--rose)}
+.reviews .l{display:flex;gap:36px;align-items:center;flex-wrap:wrap}
+.reviews h2{font-size:40px}
+
+/* petshop */
+#petshop{padding:50px 0 110px}
+.shop{display:grid;grid-template-columns:4fr 8fr;gap:40px;align-items:start}
+.shop .side{position:sticky;top:110px;display:flex;flex-direction:column;gap:20px}
+.shop .side h2 em{color:var(--rose)}
+.ask{background:#FFF0CC;border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.ask b{font-size:17px}
+.shop .card{flex-direction:row;gap:20px;align-items:flex-start;padding:32px}
+.shop .card div{display:flex;flex-direction:column;gap:8px}
+
+/* agenda */
+#agenda{background:var(--rose);color:#fff}
+#agenda .eyebrow{color:var(--accent-light)}
+#agenda .lead{color:var(--on-rose1)}
+.ag{display:grid;grid-template-columns:5fr 7fr;gap:48px;align-items:start}
+.ag .side{display:flex;flex-direction:column;gap:22px}
+.ag-steps{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.ag-steps li{display:flex;gap:14px;align-items:center;font-size:18px;color:var(--on-rose2)}
+.ag-steps li .d{width:36px;height:36px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;border:2px solid var(--on-rose2)}
+.ag-steps li.cur{color:#fff;font-weight:700}.ag-steps li.cur .d{background:var(--cream);border-color:var(--cream);color:var(--ink)}
+.ag-steps li.done{color:#fff}.ag-steps li.done .d{background:var(--accent);border-color:var(--accent);color:var(--ink)}
+.form{background:var(--cream);color:var(--ink);border-radius:32px;padding:44px;box-shadow:0 30px 60px rgba(60,10,30,.25);display:flex;flex-direction:column;gap:28px;min-height:560px}
+.prog{display:flex;flex-direction:column;gap:10px;font-size:14px;font-weight:600;color:var(--muted2)}
+.bar{height:8px;border-radius:999px;background:var(--line);overflow:hidden}.bar i{display:block;height:100%;background:var(--rose);border-radius:999px;transition:width .25s ease}
+.pane{display:none;flex-direction:column;gap:22px}.pane.on{display:flex}
+.pane h3{font-size:32px}
+.hint{font-size:15px;color:var(--muted2);margin-top:4px}
+.req{color:var(--rose)}
+.opts{display:grid;gap:12px}
+.opts.c2{grid-template-columns:1fr 1fr}.opts.c3{grid-template-columns:repeat(3,1fr)}.opts.c1{grid-template-columns:1fr}
+.opt{font:inherit;cursor:pointer;text-align:left;font-size:17px;font-weight:600;padding:18px 20px;border-radius:16px;display:flex;gap:12px;align-items:center;background:#fff;color:var(--ink);border:2px solid #E6CFC6}
+.opt[aria-pressed="true"]{background:var(--blush);border-color:var(--rose)}
+.opt .box{width:24px;height:24px;flex-shrink:0;border-radius:7px;border:2px solid #D9BEB4;background:#fff;display:flex;align-items:center;justify-content:center}
+.opt[aria-pressed="true"] .box{background:var(--rose);border-color:var(--rose)}
+.opt .box svg{opacity:0}.opt[aria-pressed="true"] .box svg{opacity:1}
+.opt .dot{width:22px;height:22px;flex-shrink:0;border-radius:999px;border:2px solid #D9BEB4;background:#fff}
+.opt[aria-pressed="true"] .dot{background:var(--rose);border-color:var(--rose);box-shadow:inset 0 0 0 4px var(--blush)}
+.opt.slot{flex-direction:column;align-items:flex-start;gap:2px}.opt.slot small{font-size:14px;font-weight:500;opacity:.8}
+.opt.size{justify-content:center}
+.field{display:flex;flex-direction:column;gap:10px}
+.field label,.field .lbl{font-size:15px;font-weight:600}
+.field label span{font-weight:400;color:var(--muted2)}
+.field input,.field textarea{font:inherit;font-size:17px;padding:15px 18px;border-radius:14px;border:1.5px solid #E6CFC6;background:#fff;color:var(--ink);width:100%}
+.field textarea{resize:vertical;min-height:96px}
+.summary{background:#fff;border:1px dashed #E6CFC6;border-radius:16px;padding:18px 20px;font-size:15px;color:var(--muted);white-space:pre-line}
+.form-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:auto}
+.btn[disabled],.btn.off{background:#E6CFC6;color:var(--muted2);cursor:not-allowed;pointer-events:none;transform:none}
+
+/* ubicación */
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:stretch}
+.loc .media{display:flex;flex-direction:column;gap:16px}
+.loc .media img{width:100%;height:420px;object-fit:cover;border-radius:28px;background:var(--blush2)}
+.maplink{height:180px;border-radius:28px;background:#E4F1EA;color:#1F5A3D;text-decoration:none;display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;font-weight:600}
+.loc .info{display:flex;flex-direction:column;gap:24px}
+.hours{background:#fff;border:1px solid var(--line);border-radius:24px;padding:10px 28px}
+.hours table{width:100%;border-collapse:collapse;font-size:17px}
+.hours caption{text-align:left;font-weight:700;font-size:15px;padding:16px 0 8px;color:var(--muted2)}
+.hours th,.hours td{padding:12px 0;font-weight:400}
+.hours th{text-align:left}.hours td{text-align:right}
+.hours tr+tr{border-top:1px solid var(--line)}
+.hours tr.today{color:var(--rose)}.hours tr.today th,.hours tr.today td{font-weight:700}
+.today-tag{margin-left:10px;font-size:12px;font-weight:700;background:var(--rose);color:#fff;padding:3px 9px;border-radius:999px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+
+/* faq */
+#faq{background:var(--blush)}
+#faq .eyebrow{color:var(--rose-dark)}
+.faq{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq details{background:#fff;border-radius:20px;border:1px solid var(--rose-border);overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;padding:24px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:var(--f-title);font-size:22px;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{width:40px;height:40px;flex-shrink:0;border-radius:999px;background:var(--blush);color:var(--rose);display:flex;align-items:center;justify-content:center;transition:transform .2s ease}
+.faq details[open] summary .pm{transform:rotate(45deg);background:var(--rose);color:#fff}
+.faq details p{padding:0 28px 26px;color:var(--muted);font-size:17px}
+
+/* cta */
+.cta{background:var(--ink);color:var(--cream);border-radius:40px;padding:80px 72px;display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap}
+.cta h2{font-size:clamp(40px,5vw,64px)}
+.cta h2 em{color:var(--rose-soft)}
+.cta p{color:#E0CCD4;font-size:19px;margin-top:14px}
+
+footer{border-top:1px solid var(--line)}
+footer .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;padding-top:64px;padding-bottom:40px}
+footer .cols>div{display:flex;flex-direction:column;gap:8px;font-size:15px}
+footer .t{font-size:13px;font-weight:700;letter-spacing:1.5px;color:var(--rose)}
+footer .bottom{display:flex;justify-content:space-between;gap:16px;padding-top:20px;padding-bottom:40px;font-size:14px;color:var(--muted2);border-top:1px solid var(--line);flex-wrap:wrap}
+footer .bottom a{color:var(--muted2)}
+
+.split>*,.shop>*,.ag>*,.loc>*,.hero .wrap>*,.opts>*{min-width:0}
+.opt{white-space:normal}
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:40;width:60px;height:60px;border-radius:999px;background:#1FA855;color:#fff;display:none;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+
+/* responsive */
+@media (max-width:1080px){
+  nav.links{display:none}
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .collage{height:520px;max-width:560px;width:100%;margin:0 auto}
+  .collage .p1{width:62%;height:430px}.collage .p2{width:46%;height:280px}
+  .seal{right:auto;left:42%;top:auto;bottom:40px}
+  .split,.shop,.ag,.loc{grid-template-columns:1fr}
+  .shop .side{position:static}
+  .sv-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  footer .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  section{padding:72px 0}
+  .topbar .addr{display:none}
+  header.nav .wrap{padding-top:12px;padding-bottom:12px}
+  header.nav .btn{padding:11px 16px;font-size:15px}
+  header.nav .btn .t-long{display:none}
+  .brand .sub{display:none}
+  .hero .wrap{padding-top:40px;padding-bottom:64px}
+  .stats{grid-template-columns:1fr 1fr}
+  .collage{height:440px}
+  .collage .p1{width:72%;height:360px}.collage .p2{width:52%;height:220px}
+  .rating-card{left:0;top:40px;padding:14px 16px}.rating-card b{font-size:34px}
+  .seal{width:100px;height:100px;font-size:18px;left:48%;bottom:24px}
+  .band .wrap{font-size:18px;justify-content:center}
+  .grid2,.sv-grid,.steps,.opts.c2,.opts.c3{grid-template-columns:1fr}
+  .offset{margin-top:0}
+  .seg-wrap{align-items:flex-start}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+  .gallery img:nth-child(6){grid-column:span 2}
+  .reviews{padding:36px 28px}.reviews .big{font-size:96px}
+  .form{padding:28px 22px;border-radius:24px;min-height:0}
+  .loc .media img{height:280px}
+  .cta{padding:48px 28px;border-radius:28px}
+  footer .cols{grid-template-columns:1fr}
+  .wa-float{display:flex}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="left">
+      <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-hoy>Abierto todos los días</span></span>
+      <span class="addr"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span data-t="negocio.direccion"></span></span>
+    </div>
+    <a data-wa data-t="negocio.telefono_visible" href="#"></a>
+  </div>
+</div>
+
+<header class="nav" id="inicio">
+  <div class="wrap">
+    <a class="brand" href="#inicio" data-brand>
+      <span class="mark"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><ellipse cx="7" cy="8" rx="2" ry="2.6"/><ellipse cx="12" cy="5.8" rx="2" ry="2.6"/><ellipse cx="17" cy="8" rx="2" ry="2.6"/><ellipse cx="4.6" cy="13" rx="1.8" ry="2.3"/><path d="M12 11c-3.4 0-6 3.6-6 6.2 0 1.8 1.5 2.8 3.2 2.8 1.2 0 1.8-.6 2.8-.6s1.6.6 2.8.6c1.7 0 3.2-1 3.2-2.8C18 14.6 15.4 11 12 11z"/></svg></span>
+      <span><span class="name" data-t="negocio.nombre">EntrePelos</span><span class="sub" data-t="negocio.subtitulo_logo"></span></span>
+    </a>
+    <nav class="links" aria-label="Principal">
+      <a href="#bienestar">Bienestar</a><a href="#servicios">Servicios</a><a href="#galeria">Galería</a><a href="#petshop">Petshop</a><a href="#ubicacion">Ubicación</a><a href="#faq">Preguntas</a>
+    </nav>
+    <a class="btn btn-rose" href="#agenda"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Agendar<span class="t-long"> hora</span></span></a>
+  </div>
+</header>
+
+<main id="contenido">
+<div class="hero">
+  <div class="wrap">
+    <div class="copy">
+      <span class="pill" data-t="portada.etiqueta"></span>
+      <h1><span data-t="portada.titulo"></span> <em data-t="portada.titulo_destacado"></em></h1>
+      <p class="lead" data-t="portada.bajada"></p>
+      <div class="ctas">
+        <a class="btn btn-rose" href="#agenda" style="font-size:17px;padding:17px 28px">Agendar hora</a>
+        <a class="btn btn-ghost" data-wa="Hola EntrePelos, quería consultar por una hora para mi peludito" href="#" style="font-size:17px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.2A8.5 8.5 0 1 1 20 11.5z"/></svg>Escríbenos por WhatsApp</a>
+      </div>
+      <ul class="stats">
+        <li><b><span data-t="negocio.nota_google"></span><svg width="20" height="20" viewBox="0 0 24 24" fill="#E8A21A"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg></b><span>en Google · <span data-t="negocio.resenas_google"></span> reseñas</span></li>
+        <li><b>0</b><span>sedantes, siempre</span></li>
+        <li><b>2</b><span>especies: perros y gatos</span></li>
+        <li><b>7/7</b><span>abierto todos los días</span></li>
+      </ul>
+    </div>
+    <div class="collage">
+      <img class="p1" data-img="portada.foto_principal" data-alt="portada.foto_principal_descripcion" alt="" width="400" height="500">
+      <img class="p2" data-img="portada.foto_secundaria" data-alt="portada.foto_secundaria_descripcion" alt="" width="280" height="320">
+      <div class="rating-card"><b data-t="negocio.nota_google"></b><span><span class="stars" data-stars></span><small><span data-t="negocio.resenas_google"></span> reseñas en Google</small></span></div>
+      <div class="seal" aria-hidden="true"><i>Sin</i><b>sedantes</b><small>NUNCA</small></div>
+    </div>
+  </div>
+</div>
+
+<div class="band" aria-hidden="true"><div class="wrap"><span>Sin sedantes</span><span class="star">✦</span><span>Refuerzo positivo</span><span class="star">✦</span><span>Perros y gatos</span><span class="star">✦</span><span>Petshop</span><span class="star">✦</span><span>La Florida</span></div></div>
+
+<section id="bienestar">
+  <div class="wrap split">
+    <div class="stack">
+      <span class="eyebrow">Nuestra forma de trabajar</span>
+      <h2>Sin sedantes. <em style="color:var(--rose)">Con paciencia.</em></h2>
+      <p class="lead">Tu peludito se atiende despierto, tranquilo y a su ritmo. Trabajamos con refuerzo positivo —premios, cariño y calma— para que la peluquería sea un buen rato y no un mal momento.</p>
+    </div>
+    <div class="grid2">
+      <div class="card"><span class="ico rose"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span><h3>Sin sedantes.</h3><p>Se atiende despierto y a su ritmo.</p></div>
+      <div class="card offset"><span class="ico gold"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v9H4v-9"/><rect x="2" y="7" width="20" height="5" rx="1"/><path d="M12 21V7M12 7H8a2.5 2.5 0 1 1 0-5c3 0 4 5 4 5zM12 7h4a2.5 2.5 0 1 0 0-5c-3 0-4 5-4 5z"/></svg></span><h3>Refuerzo positivo.</h3><p>Premios y cariño para que asocie la peluquería con algo bueno.</p></div>
+      <div class="card"><span class="ico green"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12"/></svg></span><h3>Atención personalizada.</h3><p>Cada peludito tiene su carácter, su pelaje y su corte.</p></div>
+      <div class="card dark offset"><span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 22l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span><h3>Bienestar primero.</h3><p>Su tranquilidad importa tanto como el resultado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="sv-head">
+      <div class="intro"><span class="eyebrow">Servicios y valores</span><h2>Servicios</h2><p class="lead">Elige el tamaño de tu peludito y te mostramos los valores de referencia.</p></div>
+      <div class="seg-wrap"><span id="lbl-size">Tamaño de tu peludito</span>
+        <div class="seg" role="group" aria-labelledby="lbl-size">
+          <button type="button" data-size="pequeno" aria-pressed="false">Pequeño</button>
+          <button type="button" data-size="mediano" aria-pressed="true">Mediano</button>
+          <button type="button" data-size="grande" aria-pressed="false">Grande</button>
+        </div>
+      </div>
+    </div>
+    <div class="sv-grid" data-servicios></div>
+    <p class="note"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg><span data-t="nota_precios"></span></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="center"><span class="eyebrow">Paso a paso</span><h2>Así es una visita a <span data-t="negocio.nombre"></span></h2></div>
+    <ol class="steps">
+      <li><span class="num" style="background:var(--rose);color:#fff">1</span><h3>Agendas por WhatsApp.</h3><p>Eliges el servicio y el día, y nos cuentas cómo es tu peludito.</p></li>
+      <li><span class="num" style="background:var(--blush2);color:var(--rose-deep)">2</span><h3>Llegas y nos conocemos.</h3><p>Si es nervioso o es su primera vez, lo sabemos antes de que llegue.</p></li>
+      <li><span class="num" style="background:var(--accent-light);color:#6B4508">3</span><h3>Baño, corte y cariño.</h3><p>Sin sedantes y con refuerzo positivo, a su ritmo. Mientras, puedes darte una vuelta por el petshop.</p></li>
+      <li><span class="num" style="background:var(--ink);color:var(--cream)">4</span><h3>Sale feliz.</h3><p>Bañadito, olorosito y listo para volver a casa.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="gal-head">
+      <div class="intro"><span class="eyebrow">Clientes de cuatro patas</span><h2>Así salen de <em data-t="negocio.nombre"></em></h2><p class="lead">Algunos de nuestros clientes de cuatro patas. Hay muchos más en Instagram.</p></div>
+      <a class="btn btn-light" data-ig href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>Ver más en Instagram</a>
+    </div>
+    <div class="gallery" data-galeria></div>
+  </div>
+</section>
+
+<section id="resenas">
+  <div class="wrap">
+    <div class="reviews">
+      <div class="l"><span class="big" data-t="negocio.nota_google"></span><div class="stack" style="gap:10px"><span class="stars" data-stars data-size="26"></span><h2>Lo que dicen sus humanos</h2><span style="color:var(--muted)"><span data-t="negocio.resenas_google"></span> reseñas en Google</span></div></div>
+      <a class="btn btn-ghost" data-href="negocio.enlace_resenas" href="#" target="_blank" rel="noopener">Ver reseñas en Google</a>
+    </div>
+  </div>
+</section>
+
+<section id="petshop">
+  <div class="wrap shop">
+    <div class="side">
+      <span class="eyebrow">Mientras esperas</span>
+      <h2>Y además, <em>petshop</em></h2>
+      <p class="lead">Mientras tu peludito se baña, date una vuelta. Tenemos de todo para su día a día.</p>
+      <div class="ask"><b>¿Buscas algo en particular?</b><a class="btn btn-rose" data-wa="Hola EntrePelos, quería saber si tienen…" href="#">Pregúntanos por WhatsApp</a></div>
+    </div>
+    <div class="grid2">
+      <div class="card"><span class="ico rose"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span><div><h3>Alimento y granel</h3><p>Alimento para perros, también a granel.</p></div></div>
+      <div class="card"><span class="ico gold"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3l-5 4 3 3 2-1v12h8V9l2 1 3-3-5-4a4 4 0 0 1-8 0z"/></svg></span><div><h3>Ropa y perfumes</h3><p>Para salir a pasear con estilo y oliendo rico.</p></div></div>
+      <div class="card"><span class="ico green"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.5 9.5c3 1 5.5 3.5 6.5 11M20.5 9.5c-3 1-5.5 3.5-6.5 11M6 5.5c2 2.5 10 2.5 12 0"/></svg></span><div><h3>Juguetes y accesorios</h3><p>Para jugar, pasear y regalonear.</p></div></div>
+      <div class="card"><span class="ico blue"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 9.5a2.5 2.5 0 1 1 3-3.7l4.7 4.7a2.5 2.5 0 1 1 3.3 3.3 2.5 2.5 0 1 1-3 3.7L9.8 12.8a2.5 2.5 0 1 1-3.3-3.3z"/></svg></span><div><h3>Higiene y snacks</h3><p>Premios y productos para su cuidado diario.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="agenda">
+  <div class="wrap ag">
+    <div class="side">
+      <span class="eyebrow">Agenda online</span>
+      <h2>Agenda tu hora en <em>un minuto</em></h2>
+      <p class="lead">Completa estos cuatro pasos y se abre WhatsApp con tu solicitud lista. Te confirmamos la hora por ahí.</p>
+      <ol class="ag-steps" data-agsteps>
+        <li><span class="d">1</span>Servicio</li><li><span class="d">2</span>Tu peludito</li><li><span class="d">3</span>Cómo es</li><li><span class="d">4</span>Horario</li>
+      </ol>
+    </div>
+    <form class="form" data-form novalidate>
+      <div class="prog"><span>Paso <span data-stepnum>1</span> de 4</span><div class="bar"><i data-bar style="width:25%"></i></div></div>
+
+      <fieldset class="pane on" data-pane="1" style="border:0;padding:0;margin:0">
+        <legend style="padding:0"><h3>¿Qué necesita tu peludito?</h3><p class="hint">Puedes elegir más de uno.</p></legend>
+        <div class="opts c2" data-svcopts></div>
+      </fieldset>
+
+      <fieldset class="pane" data-pane="2" style="border:0;padding:0;margin:0">
+        <legend style="padding:0"><h3>Cuéntanos de tu peludito</h3></legend>
+        <div class="field"><span class="lbl" id="lbl-tam">Tamaño <span class="req">*</span></span>
+          <div class="opts c3" role="group" aria-labelledby="lbl-tam">
+            <button type="button" class="opt size" data-one="tam" data-v="Pequeño" aria-pressed="false">Pequeño</button>
+            <button type="button" class="opt size" data-one="tam" data-v="Mediano" aria-pressed="false">Mediano</button>
+            <button type="button" class="opt size" data-one="tam" data-v="Grande" aria-pressed="false">Grande</button>
+          </div>
+        </div>
+        <div class="field"><label for="raza">Raza <span>(opcional)</span></label><input id="raza" type="text" placeholder="Ej.: poodle, mestizo, gato persa…"></div>
+      </fieldset>
+
+      <fieldset class="pane" data-pane="3" style="border:0;padding:0;margin:0">
+        <legend style="padding:0"><h3>¿Cómo es en la peluquería? <span class="req">*</span></h3></legend>
+        <div class="opts c1">
+          <button type="button" class="opt" data-one="temp" data-v="Tranquilo" aria-pressed="false"><span class="dot"></span>Tranquilo</button>
+          <button type="button" class="opt" data-one="temp" data-v="Nervioso o ansioso" aria-pressed="false"><span class="dot"></span>Nervioso o ansioso</button>
+          <button type="button" class="opt" data-one="temp" data-v="Es su primera vez" aria-pressed="false"><span class="dot"></span>Es su primera vez</button>
+        </div>
+        <div class="field"><label for="notas">¿Algo que debamos saber? <span>(opcional)</span></label><textarea id="notas" rows="3" placeholder="Le molesta que le toquen las patas, tiene nudos…"></textarea></div>
+      </fieldset>
+
+      <fieldset class="pane" data-pane="4" style="border:0;padding:0;margin:0">
+        <legend style="padding:0"><h3>Horario <span class="req">*</span></h3><p class="hint">Te confirmamos la hora exacta por WhatsApp.</p></legend>
+        <div class="opts c3">
+          <button type="button" class="opt slot" data-one="slot" data-v="Mañana (11:00 a 14:00)" aria-pressed="false">Mañana<small>11:00 a 14:00</small></button>
+          <button type="button" class="opt slot" data-one="slot" data-v="Tarde (14:00 a 17:00)" aria-pressed="false">Tarde<small>14:00 a 17:00</small></button>
+          <button type="button" class="opt slot" data-one="slot" data-v="Tarde-noche (17:00 a 20:00)" aria-pressed="false">Tarde-noche<small>17:00 a 20:00</small></button>
+        </div>
+        <div class="summary" data-summary></div>
+      </fieldset>
+
+      <div class="form-nav">
+        <button type="button" class="btn btn-ghost" data-back hidden>Atrás</button>
+        <span style="flex-grow:1"></span>
+        <button type="button" class="btn btn-rose" data-next disabled>Siguiente</button>
+        <a class="btn btn-rose off" data-send href="#" target="_blank" rel="noopener" hidden><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.2A8.5 8.5 0 1 1 20 11.5z"/></svg>Enviar por WhatsApp</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="ubicacion">
+  <div class="wrap loc">
+    <div class="media">
+      <img data-img="fachada.foto" data-alt="fachada.descripcion" alt="" width="600" height="420" loading="lazy">
+      <a class="maplink" data-href="negocio.enlace_como_llegar" href="#" target="_blank" rel="noopener"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></svg>Ver en Google Maps</a>
+    </div>
+    <div class="info">
+      <span class="eyebrow">Ubicación y horario</span>
+      <h2>Visítanos en La Florida</h2>
+      <p class="lead" data-t="negocio.direccion"></p>
+      <div class="hours"><table><caption>Horario de atención</caption><tbody data-horario></tbody></table></div>
+      <div class="row">
+        <a class="btn btn-rose" data-href="negocio.enlace_como_llegar" href="#" target="_blank" rel="noopener">Cómo llegar</a>
+        <a class="btn btn-ghost" data-wa="Hola EntrePelos, quería consultar por una hora para mi peludito" href="#">WhatsApp</a>
+        <a class="btn btn-ghost" data-ig href="#">Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="center"><span class="eyebrow">Dudas</span><h2>Preguntas frecuentes</h2></div>
+    <div class="faq" data-faq></div>
+  </div>
+</section>
+
+<section style="padding-bottom:90px">
+  <div class="wrap">
+    <div class="cta">
+      <div><h2>¿Le toca baño a tu <em>peludito?</em></h2><p>Agenda en un minuto y te confirmamos por WhatsApp.</p></div>
+      <a class="btn btn-accent" href="#agenda" style="font-size:18px;padding:20px 34px">Agendar hora</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div><span style="font-family:var(--f-title);font-size:30px;font-weight:700" data-t="negocio.nombre"></span><span style="color:var(--muted)">Peluquería canina y felina &amp; petshop en La Florida</span></div>
+    <div><span class="t">DIRECCIÓN</span><span data-t="negocio.direccion"></span></div>
+    <div><span class="t">HORARIO</span><span data-horario-corto></span></div>
+    <div><span class="t">CONTACTO</span><a data-wa data-t="negocio.telefono_visible" href="#"></a><a data-ig data-ig-handle href="#"></a></div>
+  </div>
+  <div class="wrap bottom"><span>© <span data-year></span> <span data-t="negocio.nombre"></span></span><a href="https://sitiostudio.cl">Sitio web por SitioStudio</a></div>
+</footer>
+
+<a class="wa-float" data-wa="Hola EntrePelos, quería consultar por una hora para mi peludito" href="#" aria-label="Escríbenos por WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.2A8.5 8.5 0 1 1 20 11.5z"/></svg></a>
+
+<script>
+(function(){
+  var TITLE_FONTS={'Fraunces':['Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600',"'Fraunces',Georgia,serif"],
+    'Playfair Display':['Playfair+Display:ital,wght@0,600;0,700;1,500',"'Playfair Display',Georgia,serif"],
+    'DM Serif Display':['DM+Serif+Display:ital@0;1',"'DM Serif Display',Georgia,serif"],
+    'Lora':['Lora:ital,wght@0,600;0,700;1,500',"'Lora',Georgia,serif"],
+    'Bricolage Grotesque':['Bricolage+Grotesque:wght@600;700',"'Bricolage Grotesque',system-ui,sans-serif"],
+    'Baloo 2':['Baloo+2:wght@600;700',"'Baloo 2',system-ui,sans-serif"]};
+  var BODY_FONTS={'Figtree':['Figtree:wght@400;500;600;700',"'Figtree',system-ui,sans-serif"],
+    'Nunito':['Nunito:wght@400;600;700',"'Nunito',system-ui,sans-serif"],
+    'DM Sans':['DM+Sans:wght@400;500;700',"'DM Sans',system-ui,sans-serif"],
+    'Work Sans':['Work+Sans:wght@400;500;600;700',"'Work Sans',system-ui,sans-serif"],
+    'Lato':['Lato:wght@400;700',"'Lato',system-ui,sans-serif"]};
+
+  function get(o,p){return p.split('.').reduce(function(a,k){return a==null?a:a[k]},o)}
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+  function hex(h,d){return (typeof h==='string'&&/^#[0-9a-fA-F]{6}$/.test(h.trim()))?h.trim():d}
+  function mix(a,b,t){var pa=[1,3,5].map(function(i){return parseInt(a.substr(i,2),16)}),pb=[1,3,5].map(function(i){return parseInt(b.substr(i,2),16)});
+    return '#'+pa.map(function(v,i){var x=Math.round(v+(pb[i]-v)*t);return (x<16?'0':'')+x.toString(16)}).join('')}
+  function star(n){var s='';for(var i=0;i<5;i++)s+='<svg width="'+n+'" height="'+n+'" viewBox="0 0 24 24" fill="#E8A21A" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg>';return s}
+
+  function aplicarEstilo(e){
+    e=e||{};var r=document.documentElement.style;
+    var rose=hex(e.color_principal,'#C92A62'),ink=hex(e.color_oscuro,'#2B1B26'),cream=hex(e.color_fondo,'#FFF8F1'),acc=hex(e.color_acento,'#FFC857'),W='#ffffff',K='#000000';
+    var v={'--rose':rose,'--rose-dark':mix(rose,K,.22),'--rose-deep':mix(rose,K,.45),'--blush':mix(rose,W,.88),'--blush2':mix(rose,W,.74),'--rose-soft':mix(rose,W,.55),
+      '--rose-border':mix(rose,W,.72),'--on-rose1':mix(rose,W,.86),'--on-rose2':mix(rose,W,.62),'--ink':ink,'--ink-muted':mix(ink,W,.82),'--cream':cream,'--accent':acc,'--accent-light':mix(acc,W,.55)};
+    for(var k in v)r.setProperty(k,v[k]);
+    var meta=document.querySelector('meta[name="theme-color"]');if(meta)meta.content=rose;
+    var tf=TITLE_FONTS[e.fuente_titulos]||TITLE_FONTS['Fraunces'],bf=BODY_FONTS[e.fuente_texto]||BODY_FONTS['Figtree'];
+    document.getElementById('fuentes').href='https://fonts.googleapis.com/css2?family='+tf[0]+'&family='+bf[0]+'&display=swap';
+    r.setProperty('--f-title',tf[1]);r.setProperty('--f-body',bf[1]);
+  }
+
+  function render(d){
+    var n=d.negocio||{};
+    aplicarEstilo(d.estilo);
+    var wa=function(t){return 'https://wa.me/'+String(n.whatsapp||'').replace(/\D/g,'')+(t?'?text='+encodeURIComponent(t):'')};
+    var ig='https://www.instagram.com/'+String(n.instagram||'').replace(/^@/,'')+'/';
+
+    document.querySelectorAll('[data-t]').forEach(function(el){var v=get(d,el.getAttribute('data-t'));if(v!=null&&v!=='')el.textContent=v});
+    document.querySelectorAll('[data-img]').forEach(function(el){var v=get(d,el.getAttribute('data-img'));if(v)el.src=v;var a=el.getAttribute('data-alt');if(a)el.alt=get(d,a)||''});
+    document.querySelectorAll('[data-href]').forEach(function(el){var v=get(d,el.getAttribute('data-href'));if(v)el.href=v});
+    document.querySelectorAll('[data-wa]').forEach(function(el){el.href=wa(el.getAttribute('data-wa'));if(!el.target){el.target='_blank';el.rel='noopener'}});
+    document.querySelectorAll('[data-ig]').forEach(function(el){el.href=ig;el.target='_blank';el.rel='noopener'});
+    document.querySelectorAll('[data-ig-handle]').forEach(function(el){el.textContent='@'+String(n.instagram||'').replace(/^@/,'')});
+    document.querySelectorAll('[data-stars]').forEach(function(el){el.innerHTML=star(el.getAttribute('data-size')||16)});
+    document.querySelectorAll('[data-year]').forEach(function(el){el.textContent=new Date().getFullYear()});
+
+    if(n.logo){var b=document.querySelector('[data-brand]');b.innerHTML='<img class="logo" src="'+esc(n.logo)+'" alt="'+esc(n.nombre||'')+'">'}
+    if(n.nombre){document.title=n.nombre+' · Peluquería canina y felina en La Florida · Sin sedantes'}
+
+    // servicios
+    var size='mediano',svs=d.servicios||[];
+    var sizeName={pequeno:'Pequeño',mediano:'Mediano',grande:'Grande'};
+    var svIcon='<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.8 4-4 0-1.1-.6-2.2-1.7-3.1S7.3 7 7 5.5c-.3 1.5-1.1 2.8-2.3 3.7S3 11.2 3 12.3c0 2.2 1.8 4 4 4z"/><path d="M12.6 6.6A11 11 0 0 0 14 3c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a7 7 0 0 1-11.9 5"/></svg>';
+    function pintarServicios(){
+      document.querySelector('[data-servicios]').innerHTML=svs.map(function(s){
+        return '<article class="sv"><span class="ico rose">'+svIcon+'</span><h3>'+esc(s.nombre)+'</h3><p>'+esc(s.descripcion)+'</p><div class="price"><small>Desde · '+sizeName[size]+'</small><b>'+esc(s['precio_'+size]||'Consultar')+'</b></div></article>'}).join('');
+    }
+    pintarServicios();
+    document.querySelectorAll('[data-size]').forEach(function(b){if(!b.closest('.seg'))return;b.addEventListener('click',function(){size=b.getAttribute('data-size');document.querySelectorAll('.seg [data-size]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});pintarServicios()})});
+
+    // galería
+    document.querySelector('[data-galeria]').innerHTML=(d.galeria||[]).map(function(g){return '<img src="'+esc(g.foto)+'" alt="'+esc(g.descripcion)+'" loading="lazy">'}).join('');
+
+    // horario
+    var hs=d.horario||[],hoy=(new Date().getDay()+6)%7;
+    document.querySelector('[data-horario]').innerHTML=hs.map(function(h,i){var t=i===hoy;return '<tr'+(t?' class="today"':'')+'><th scope="row">'+esc(h.dia)+(t?'<span class="today-tag">Hoy</span>':'')+'</th><td>'+esc(h.horas)+'</td></tr>'}).join('');
+    if(hs[hoy]){document.querySelector('[data-hoy]').textContent='Hoy: '+hs[hoy].horas}
+    var corto=[];hs.forEach(function(h){var last=corto[corto.length-1];if(last&&last.horas===h.horas){last.fin=h.dia}else corto.push({ini:h.dia,fin:null,horas:h.horas})});
+    document.querySelector('[data-horario-corto]').innerHTML=corto.map(function(c){return esc(c.ini+(c.fin?' a '+c.fin.toLowerCase():'')+': '+c.horas)}).join('<br>');
+
+    // preguntas
+    var pm='<span class="pm"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>';
+    document.querySelector('[data-faq]').innerHTML=(d.faq||[]).map(function(f,i){return '<details'+(i===0?' open':'')+'><summary>'+esc(f.pregunta)+pm+'</summary><p>'+esc(f.respuesta)+'</p></details>'}).join('');
+
+    // agenda
+    agenda(svs.map(function(s){return s.nombre}),wa);
+  }
+
+  function agenda(nombres,wa){
+    var st={step:1,svcs:[],tam:'',temp:'',slot:''};
+    var box='<span class="box"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>';
+    var so=document.querySelector('[data-svcopts]');
+    so.innerHTML=nombres.map(function(n){return '<button type="button" class="opt" data-svc="'+esc(n)+'" aria-pressed="false">'+box+esc(n)+'</button>'}).join('');
+    so.querySelectorAll('[data-svc]').forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-svc'),k=st.svcs.indexOf(v);if(k>=0)st.svcs.splice(k,1);else st.svcs.push(v);b.setAttribute('aria-pressed',k>=0?'false':'true');upd()})});
+    document.querySelectorAll('[data-one]').forEach(function(b){b.addEventListener('click',function(){var g=b.getAttribute('data-one');st[g]=b.getAttribute('data-v');document.querySelectorAll('[data-one="'+g+'"]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});upd()})});
+    var next=document.querySelector('[data-next]'),back=document.querySelector('[data-back]'),send=document.querySelector('[data-send]');
+    next.addEventListener('click',function(){if(ok()){st.step++;upd(true)}});
+    back.addEventListener('click',function(){st.step--;upd(true)});
+    document.getElementById('raza').addEventListener('input',upd);document.getElementById('notas').addEventListener('input',upd);
+    function ok(){return (st.step===1&&st.svcs.length)||(st.step===2&&st.tam)||(st.step===3&&st.temp)||(st.step===4&&st.slot)}
+    function upd(focus){
+      document.querySelectorAll('[data-pane]').forEach(function(p){p.classList.toggle('on',+p.getAttribute('data-pane')===st.step)});
+      document.querySelector('[data-stepnum]').textContent=st.step;
+      document.querySelector('[data-bar]').style.width=(st.step*25)+'%';
+      document.querySelectorAll('[data-agsteps] li').forEach(function(li,i){var n=i+1;li.className=n===st.step?'cur':(n<st.step?'done':'');li.querySelector('.d').textContent=n<st.step?'✓':n});
+      back.hidden=st.step===1;next.hidden=st.step===4;send.hidden=st.step!==4;next.disabled=!ok();
+      var raza=document.getElementById('raza').value.trim(),notas=document.getElementById('notas').value.trim();
+      var L=['Hola EntrePelos, quería agendar una hora para mi peludito.','Servicio: '+(st.svcs.join(', ')||'—'),'Tamaño: '+(st.tam||'—')];
+      if(raza)L.push('Raza: '+raza);L.push('Cómo es en la peluquería: '+(st.temp||'—'));if(notas)L.push('A tener en cuenta: '+notas);L.push('Horario preferido: '+(st.slot||'—'));
+      send.href=wa(L.join('\n'));send.classList.toggle('off',!st.slot);
+      document.querySelector('[data-summary]').textContent='Resumen de tu solicitud\n'+L.slice(1).join('\n');
+      if(focus===true){var h=document.querySelector('[data-pane="'+st.step+'"] h3');if(h){h.setAttribute('tabindex','-1');h.focus({preventScroll:true})}}
+    }
+    upd();
+  }
+
+  fetch('data/sitio.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(render).catch(function(e){console.error('No se pudo cargar data/sitio.json',e)});
+})();
+</script>
+</body>
+</html>
