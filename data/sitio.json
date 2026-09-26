@@ -40,9 +40,9 @@
     {
       "nombre": "Baño y corte",
       "descripcion": "Baño completo más el corte que mejor le queda a su raza y a su estilo.",
-      "precio_pequeno": "[PRECIO]",
-      "precio_mediano": "[PRECIO]",
-      "precio_grande": "[PRECIO]"
+      "precio_pequeno": "22222",
+      "precio_mediano": "3333",
+      "precio_grande": "44444"
     },
     {
       "nombre": "Deslanado",
