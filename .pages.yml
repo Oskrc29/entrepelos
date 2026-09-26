@@ -33,11 +33,13 @@ content:
           - name: fuente_titulos
             label: Fuente de los títulos
             type: select
-            values: [Fraunces, Playfair Display, DM Serif Display, Lora, Bricolage Grotesque, Baloo 2]
+            options:
+              values: [Fraunces, Playfair Display, DM Serif Display, Lora, Bricolage Grotesque, Baloo 2]
           - name: fuente_texto
             label: Fuente del texto
             type: select
-            values: [Figtree, Nunito, DM Sans, Work Sans, Lato]
+            options:
+              values: [Figtree, Nunito, DM Sans, Work Sans, Lato]
 
       - name: negocio
         label: Datos del negocio
