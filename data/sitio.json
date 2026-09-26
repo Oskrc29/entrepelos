@@ -10,7 +10,6 @@
   "negocio": {
     "nombre": "EntrePelos",
     "subtitulo_logo": "Peluquería canina & petshop",
-    "logo": "",
     "whatsapp": "56946967314",
     "telefono_visible": "+56 9 4696 7314",
     "instagram": "entrepelos.cl",
@@ -31,41 +30,128 @@
     "foto_secundaria_descripcion": "Akita blanco y crema sentado tranquilo en la mesa de peluquería, con pañuelo rojo"
   },
   "servicios": [
-    { "nombre": "Baño", "descripcion": "Bañadito, secadito y olorosito, con productos para su tipo de pelaje.", "precio_pequeno": "[PRECIO]", "precio_mediano": "[PRECIO]", "precio_grande": "[PRECIO]" },
-    { "nombre": "Baño y corte", "descripcion": "Baño completo más el corte que mejor le queda a su raza y a su estilo.", "precio_pequeno": "[PRECIO]", "precio_mediano": "[PRECIO]", "precio_grande": "[PRECIO]" },
-    { "nombre": "Deslanado", "descripcion": "Retiramos el pelo muerto y la lana suelta para que respire y bote menos.", "precio_pequeno": "[PRECIO]", "precio_mediano": "[PRECIO]", "precio_grande": "[PRECIO]" },
-    { "nombre": "Peluquería felina", "descripcion": "Cuidado del pelaje para gatos, con calma y sin sedantes. Escríbenos y coordinamos.", "precio_pequeno": "[PRECIO]", "precio_mediano": "[PRECIO]", "precio_grande": "[PRECIO]" }
+    {
+      "nombre": "Baño",
+      "descripcion": "Bañadito, secadito y olorosito, con productos para su tipo de pelaje.",
+      "precio_pequeno": "10.000",
+      "precio_mediano": "20.000",
+      "precio_grande": "30.000"
+    },
+    {
+      "nombre": "Baño y corte",
+      "descripcion": "Baño completo más el corte que mejor le queda a su raza y a su estilo.",
+      "precio_pequeno": "[PRECIO]",
+      "precio_mediano": "[PRECIO]",
+      "precio_grande": "[PRECIO]"
+    },
+    {
+      "nombre": "Deslanado",
+      "descripcion": "Retiramos el pelo muerto y la lana suelta para que respire y bote menos.",
+      "precio_pequeno": "[PRECIO]",
+      "precio_mediano": "[PRECIO]",
+      "precio_grande": "[PRECIO]"
+    },
+    {
+      "nombre": "Peluquería felina",
+      "descripcion": "Cuidado del pelaje para gatos, con calma y sin sedantes. Escríbenos y coordinamos.",
+      "precio_pequeno": "[PRECIO]",
+      "precio_mediano": "[PRECIO]",
+      "precio_grande": "[PRECIO]"
+    }
   ],
   "nota_precios": "Valores referenciales. El valor final depende del largo y del estado del pelaje (por ejemplo, si tiene nudos) y te lo confirmamos al agendar.",
   "galeria": [
-    { "foto": "images/galeria-1.jpg", "descripcion": "Pomerania blanco y naranjo recién peinado, sentado frente a un muro verde" },
-    { "foto": "images/galeria-2.jpg", "descripcion": "Yorkshire terrier con corte cachorro y pañuelo rojo" },
-    { "foto": "images/galeria-3.jpg", "descripcion": "Beagle mestizo con pañuelo de huellitas, después de su baño" },
-    { "foto": "images/galeria-4.jpg", "descripcion": "Perrito mestizo color crema con corte parejo y pañuelo rojo" },
-    { "foto": "images/galeria-5.jpg", "descripcion": "Pomerania color crema de pelaje esponjoso, con pañuelo rojo de huellitas" },
-    { "foto": "images/galeria-6.jpg", "descripcion": "Perro negro de pelo largo, sentado y feliz después de su baño" },
-    { "foto": "images/galeria-7.jpg", "descripcion": "Bulldog francés color lila sobre la mesa rosada, con humita tricolor" },
-    { "foto": "images/galeria-8.jpg", "descripcion": "Pug negro con humita tricolor, parado sobre la mesa de peluquería" }
+    {
+      "foto": "images/galeria-1.jpg",
+      "descripcion": "Pomerania blanco y naranjo recién peinado, sentado frente a un muro verde"
+    },
+    {
+      "foto": "images/galeria-2.jpg",
+      "descripcion": "Yorkshire terrier con corte cachorro y pañuelo rojo"
+    },
+    {
+      "foto": "images/galeria-3.jpg",
+      "descripcion": "Beagle mestizo con pañuelo de huellitas, después de su baño"
+    },
+    {
+      "foto": "images/galeria-4.jpg",
+      "descripcion": "Perrito mestizo color crema con corte parejo y pañuelo rojo"
+    },
+    {
+      "foto": "images/galeria-5.jpg",
+      "descripcion": "Pomerania color crema de pelaje esponjoso, con pañuelo rojo de huellitas"
+    },
+    {
+      "foto": "images/galeria-6.jpg",
+      "descripcion": "Perro negro de pelo largo, sentado y feliz después de su baño"
+    },
+    {
+      "foto": "images/galeria-7.jpg",
+      "descripcion": "Bulldog francés color lila sobre la mesa rosada, con humita tricolor"
+    },
+    {
+      "foto": "images/galeria-8.jpg",
+      "descripcion": "Pug negro con humita tricolor, parado sobre la mesa de peluquería"
+    }
   ],
   "fachada": {
     "foto": "images/fachada.jpg",
     "descripcion": "Fachada de EntrePelos en Dr. Luis Calvo Mackenna 35-A, con su letrero de peluquería canina y petshop"
   },
   "horario": [
-    { "dia": "Lunes", "horas": "11:00 a 20:00" },
-    { "dia": "Martes", "horas": "11:00 a 20:00" },
-    { "dia": "Miércoles", "horas": "11:00 a 20:00" },
-    { "dia": "Jueves", "horas": "11:00 a 20:00" },
-    { "dia": "Viernes", "horas": "11:00 a 20:00" },
-    { "dia": "Sábado", "horas": "11:00 a 20:00" },
-    { "dia": "Domingo", "horas": "11:00 a 14:00" }
+    {
+      "dia": "Lunes",
+      "horas": "11:00 a 20:00"
+    },
+    {
+      "dia": "Martes",
+      "horas": "11:00 a 20:00"
+    },
+    {
+      "dia": "Miércoles",
+      "horas": "11:00 a 20:00"
+    },
+    {
+      "dia": "Jueves",
+      "horas": "11:00 a 20:00"
+    },
+    {
+      "dia": "Viernes",
+      "horas": "11:00 a 20:00"
+    },
+    {
+      "dia": "Sábado",
+      "horas": "11:00 a 20:00"
+    },
+    {
+      "dia": "Domingo",
+      "horas": "11:00 a 14:00"
+    }
   ],
   "faq": [
-    { "pregunta": "¿Usan sedantes?", "respuesta": "No. Atendemos sin sedantes y con refuerzo positivo, siempre a su ritmo." },
-    { "pregunta": "¿Atienden gatos?", "respuesta": "Sí, también hacemos peluquería felina. Escríbenos y coordinamos." },
-    { "pregunta": "Mi perro es nervioso, ¿lo pueden atender?", "respuesta": "Sí. Cuéntanos al agendar cómo es y qué le incomoda, así lo recibimos preparados." },
-    { "pregunta": "¿Cuánto cuesta?", "respuesta": "Depende del tamaño y del estado del pelaje. Más arriba tienes los valores de referencia por tamaño; el valor exacto te lo confirmamos al agendar." },
-    { "pregunta": "¿Tengo que agendar?", "respuesta": "Te recomendamos agendar por WhatsApp para asegurar tu hora. Atendemos de lunes a sábado de 11:00 a 20:00 y los domingos de 11:00 a 14:00." },
-    { "pregunta": "¿Qué venden en el petshop?", "respuesta": "Alimento para perros (también a granel), snacks, juguetes, ropa, perfumes, accesorios y productos de higiene y cuidado para perros y gatos." }
+    {
+      "pregunta": "¿Usan sedantes?",
+      "respuesta": "No. Atendemos sin sedantes y con refuerzo positivo, siempre a su ritmo."
+    },
+    {
+      "pregunta": "¿Atienden gatos?",
+      "respuesta": "Sí, también hacemos peluquería felina. Escríbenos y coordinamos."
+    },
+    {
+      "pregunta": "Mi perro es nervioso, ¿lo pueden atender?",
+      "respuesta": "Sí. Cuéntanos al agendar cómo es y qué le incomoda, así lo recibimos preparados."
+    },
+    {
+      "pregunta": "¿Cuánto cuesta?",
+      "respuesta": "Depende del tamaño y del estado del pelaje. Más arriba tienes los valores de referencia por tamaño; el valor exacto te lo confirmamos al agendar."
+    },
+    {
+      "pregunta": "¿Tengo que agendar?",
+      "respuesta": "Te recomendamos agendar por WhatsApp para asegurar tu hora. Atendemos de lunes a sábado de 11:00 a 20:00 y los domingos de 11:00 a 14:00."
+    },
+    {
+      "pregunta": "¿Qué venden en el petshop?",
+      "respuesta": "Alimento para perros (también a granel), snacks, juguetes, ropa, perfumes, accesorios y productos de higiene y cuidado para perros y gatos."
+    }
   ]
 }
