@@ -1,0 +1,113 @@
+media:
+  input: images
+  output: images
+  extensions: [jpg, jpeg, png, webp, gif, svg]
+
+content:
+  - name: sitio
+    label: Sitio web EntrePelos
+    type: file
+    path: data/sitio.json
+    format: json
+    fields:
+      - name: estilo
+        label: Colores y tipografía
+        type: object
+        fields:
+          - name: color_principal
+            label: Color principal (botones, destacados)
+            description: Código de color, por ejemplo #C92A62
+            type: string
+          - name: color_oscuro
+            label: Color oscuro (textos y fondos oscuros)
+            description: Por ejemplo #2B1B26
+            type: string
+          - name: color_fondo
+            label: Color de fondo
+            description: Por ejemplo #FFF8F1
+            type: string
+          - name: color_acento
+            label: Color de acento (estrellas, detalles)
+            description: Por ejemplo #FFC857
+            type: string
+          - name: fuente_titulos
+            label: Fuente de los títulos
+            type: select
+            values: [Fraunces, Playfair Display, DM Serif Display, Lora, Bricolage Grotesque, Baloo 2]
+          - name: fuente_texto
+            label: Fuente del texto
+            type: select
+            values: [Figtree, Nunito, DM Sans, Work Sans, Lato]
+
+      - name: negocio
+        label: Datos del negocio
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: subtitulo_logo, label: Texto bajo el nombre, type: string }
+          - { name: logo, label: Logo (opcional), type: image }
+          - { name: whatsapp, label: WhatsApp (solo números, con 56), type: string }
+          - { name: telefono_visible, label: Teléfono como se muestra, type: string }
+          - { name: instagram, label: Usuario de Instagram (sin @), type: string }
+          - { name: direccion, label: Dirección, type: string }
+          - { name: nota_google, label: Nota en Google, type: string }
+          - { name: resenas_google, label: Cantidad de reseñas en Google, type: string }
+          - { name: enlace_resenas, label: Enlace a las reseñas de Google, type: string }
+          - { name: enlace_como_llegar, label: Enlace Cómo llegar, type: string }
+
+      - name: portada
+        label: Portada
+        type: object
+        fields:
+          - { name: etiqueta, label: Etiqueta superior, type: string }
+          - { name: titulo, label: Título, type: string }
+          - { name: titulo_destacado, label: Palabra destacada del título, type: string }
+          - { name: bajada, label: Texto bajo el título, type: text }
+          - { name: foto_principal, label: Foto principal, type: image }
+          - { name: foto_principal_descripcion, label: Descripción de la foto principal, type: string }
+          - { name: foto_secundaria, label: Foto secundaria, type: image }
+          - { name: foto_secundaria_descripcion, label: Descripción de la foto secundaria, type: string }
+
+      - name: servicios
+        label: Servicios y precios
+        type: object
+        list: true
+        fields:
+          - { name: nombre, label: Servicio, type: string }
+          - { name: descripcion, label: Descripción, type: text }
+          - { name: precio_pequeno, label: Precio perro pequeño, type: string }
+          - { name: precio_mediano, label: Precio perro mediano, type: string }
+          - { name: precio_grande, label: Precio perro grande, type: string }
+
+      - { name: nota_precios, label: Nota bajo los precios, type: text }
+
+      - name: galeria
+        label: Galería de fotos
+        type: object
+        list: true
+        fields:
+          - { name: foto, label: Foto, type: image }
+          - { name: descripcion, label: Descripción de la foto, type: string }
+
+      - name: fachada
+        label: Foto de la fachada
+        type: object
+        fields:
+          - { name: foto, label: Foto, type: image }
+          - { name: descripcion, label: Descripción, type: string }
+
+      - name: horario
+        label: Horario de atención
+        type: object
+        list: true
+        fields:
+          - { name: dia, label: Día, type: string }
+          - { name: horas, label: Horario, type: string }
+
+      - name: faq
+        label: Preguntas frecuentes
+        type: object
+        list: true
+        fields:
+          - { name: pregunta, label: Pregunta, type: string }
+          - { name: respuesta, label: Respuesta, type: text }
